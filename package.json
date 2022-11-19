@@ -1,12 +1,27 @@
 {
-  "name": "puppy_pals",
+  "name": "puppy_pals_2209",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "start:dev": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "prisma": "^4.6.1"
+  },
+  "dependencies": {
+    "@prisma/client": "^4.6.1",
+    "express": "^4.18.2",
+    "jest": "^29.3.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.20"
+  },
+  "prisma": {
+    "seed": "node prisma/seed.js"
+  }
 }
