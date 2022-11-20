@@ -33,7 +33,7 @@ const seedDb = async () => {
   console.log("creating puppy_tricks...");
   await Promise.all(
     puppies_tricks.map(async (pt) => {
-      return prisma.puppies_Tricks.create({
+      return prisma.puppies_Tricks.upsert({
         data: pt,
       });
     })
