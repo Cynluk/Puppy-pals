@@ -12,7 +12,7 @@ app.get("/health", (req, res) => {
 });
 
 // api routes
-// app.use("/api", require("./api"));
+app.use("/api", require("./api"));
 
 app.get("*", (req, res) => {
   res.status(404).send("Oops can't find that route!");
